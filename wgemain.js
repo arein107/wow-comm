@@ -1,18 +1,19 @@
+require("dotenv").config();
+
 const formattedRoster = require("./formatRoster.js");
 
 const BlizzAPI = require('blizzapi')
 
 
-const clientId = process.env.CLIENT_ID;
+// const clientId = process.env.CLIENT_ID;
 
-const clientSecret = process.env.CLIENT_SECRET
+// const clientSecret = process.env.CLIENT_SECRET
 
 const BnetApi = new BlizzAPI({
 
   region: 'us',
-  clientId: clientId,
-  clientSecret: clientSecret
-
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET
 })
 
 
